@@ -139,8 +139,7 @@ public class Product {
             return;
         }
         for (int i = 0; i < priceHistory.size(); i++) {
-            String mark = (priceHistory.get(i) == currentPrice) ? " (текущая)" : "";
-            System.out.println((i + 1) + ". " + priceHistory.get(i) + mark);
+            System.out.println((i + 1) + ". " + priceHistory.get(i));
         }
         System.out.println("Средняя цена: " + String.format("%.2f", getAveragePrice()));
         System.out.println("Средняя наценка: " + String.format("%.2f", getAverageMargin()) + "%");
