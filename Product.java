@@ -34,6 +34,7 @@ public class Product {
         System.out.println("Товар: " + name);
         System.out.println("Себестоимость: " + costPrice);
         System.out.println("Текущая цена: " + currentPrice);
+        System.out.println("Разрешена продажа ниже себестоимости: " + (allowBelowCost ? "Да" : "Нет"));
         System.out.println("------------------------");
     }
 
@@ -121,6 +122,14 @@ public class Product {
             return 0;
         }
         return currentPrice * quantity;
+    }
+
+    public void setAllowBelowCost(boolean allow) {
+        this.allowBelowCost = allow;
+    }
+
+    public boolean isAllowBelowCost() {
+        return allowBelowCost;
     }
 
     public void printPriceHistory() {
